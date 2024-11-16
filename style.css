@@ -130,6 +130,8 @@ body {
     display: flex;
     list-style: none; /* makes the bullet points go away */
     gap: 43px;
+    padding-bottom: 16px;
+    /* margin-bottom: -16px; */
     overflow-x: auto;
     scrollbar-width: thin;
     scrollbar-color: transparent transparent;
@@ -150,4 +152,23 @@ body {
 .hourly-weather .weather-item .weather-icon {
     width: 28px;
     aspect-ratio: 1;
+}
+
+/* Responsive media quert code for small screen */
+@media (max-width: 624px) {
+    body {
+        padding: 15px;
+    }
+
+    .search-section {
+        padding: 20px;
+    }
+
+    .hourly-weather {
+        padding: 16px 20px;
+    }
+
+    .hourly-weather .weather-list {
+        gap: 32px;
+    }
 }
