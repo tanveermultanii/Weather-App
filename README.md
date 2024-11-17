@@ -42,7 +42,7 @@ A modern, responsive weather app that provides current weather details and a 24-
 
 ## Known Issues & Future Improvements
 - **Known Issues**:
-  - None at the moment. Feel free to report issues [here](https://github.com/your-username/weather-app/issues).
+  - None at the moment. Feel free to report issues [here](https://github.com/tanveermultanii/Weather-App/issues).
 - **Future Improvements**:
   - Add 7-day weather forecast.
   - Implement theme toggling (dark mode/light mode).
