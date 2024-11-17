@@ -45,6 +45,7 @@ const displayHourlyForecast = (hourlyData) => {
 
 const getWeatherDetails = async(API_URL) => {
     window.innerWidth <= 768 && searchInput.blur();
+    document.body.classList.remove("show-no-results");
 
     try {
         // Fetch weather data from the API and parse the reponse as JSON
@@ -67,7 +68,7 @@ const getWeatherDetails = async(API_URL) => {
 
         searchInput.value = data.location.name;
     } catch (error) {
-        console.log(error);
+        document.body.classList.add("show-no-results");
     }
 }
 
@@ -96,3 +97,6 @@ locationButton.addEventListener("click", () => {
         alert("Location access denied. Please enable permissions to use this feature.")
     });
 })
+
+// Initital weather request for New York as the default city
+setupWeatherRequest("new york");

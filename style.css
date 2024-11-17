@@ -21,6 +21,8 @@ body {
     border-radius: 10px;
     max-width: 425px;
     flex-grow: 1;
+    position: relative;
+    overflow: hidden;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -30,6 +32,7 @@ body {
     gap: 10px;
     align-items: center;
 }
+
 
 .search-section .input-wrapper {
     height: 54px;
@@ -90,6 +93,36 @@ body {
 
 .search-section .location-button span {
     font-size: 1.3rem;
+}
+
+.no-results {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    padding: 40px;
+    text-align: center;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transform: translate(-50%, -50%);
+}
+
+body.show-no-results .no-results {
+    display: flex;
+}
+
+.no-results .title {
+    margin: 25px 0 15px;
+}
+
+.no-results .message {
+    font-weight: 500;
+}
+
+body.show-no-results .weather-section {
+    visibility: hidden;
 }
 
 .weather-section .current-weather {
